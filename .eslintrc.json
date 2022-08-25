@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "extends": [],
+  "parserOptions": {
+    "warnOnUnsupportedTypeScriptVersion": false
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "new-cap": "off",
+        "import/no-default-export": "off",
+        "import/no-import-module-exports": "off",
+        "import/no-extraneous-dependencies": "off",
+        "node/no-unpublished-import": "off",
+        "node/no-unpublished-require": "off",
+        "node/no-extraneous-require": "off",
+        "node/no-extraneous-import": "off",
+        "@typescript-eslint/unbound-method": "off",
+        "@typescript-eslint/prefer-nullish-coalescing": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-duplicate-enum-values": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["typeAlias"],
+            "format": ["PascalCase"],
+            "custom": {
+              "regex": "^(I[A-Z]|T[A-Z])",
+              "match": false
+            }
+          }
+        ],
+        "@typescript-eslint/no-parameter-properties": "off",
+        "@typescript-eslint/no-confusing-void-expression": "off"
+      }
+    }
+  ]
+}
