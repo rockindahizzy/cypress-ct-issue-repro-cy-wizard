@@ -4,7 +4,12 @@
   "plugins": ["@nrwl/nx"],
   "extends": [],
   "parserOptions": {
-    "warnOnUnsupportedTypeScriptVersion": false
+    "warnOnUnsupportedTypeScriptVersion": false,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
   },
   "overrides": [
     {

@@ -23,6 +23,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "types": ["cypress"],
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "ui": ["libs/ui/src/index.ts"]
